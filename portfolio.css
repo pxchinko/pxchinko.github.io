@@ -1,8 +1,7 @@
-//**palette reference --> https://www.colourlovers.com/palette/678929/War
-    Modular Scale --> https://www.modularscale.com/?1&em&1.3**//
+/**palette reference --> https://www.colourlovers.com/palette/678929/War
+    Modular Scale --> https://www.modularscale.com/?1&em&1.3**/
 
 html {
-  -ms-overflow-style: scrollbar;
     font-family: 'Playfair Display', serif, 'Muli', sans-serif;
 }
 
@@ -61,21 +60,5 @@ p {
 }
 
 /*footer*/
-.myFooter {
-    overflow: hidden;
-    background-color: rgb(73,0,126) ;
-    bottom: 0;
-    padding: 5% 15%;
-}
-.myFooter p {
-    color: rgb(255,178,56);
-}
-.myFooter a:link, a:visited {
-    color: rgb(231,237,234);
-    text-decoration: none;
-}
-.myFooter a:hover {
-    color: rgb(255,0,91);
-}
 
 /*Images*/
