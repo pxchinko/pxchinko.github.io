@@ -52,68 +52,7 @@ nav a:hover {
 
 /*Banner*/
 
-header {
-    max-width: 100%;
-    margin: 0 auto;
-    height: 400px;
-}
-
-.header-img {
-    background-image: url(images/header.png);
-    height: 625px;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-h1 {
-    color: rgb(231,237,234);
-    float: left;
-    font-family: 'Playfair Display', serif, italic;
-    font-size: 12em;
-    font-size: 12vw;
-    font-weight: 800;
-    line-height: 0.63em;
-    text-align: left;
-    padding: 50px 0px 0px 50px;
-}
-
-h1 > #lastName {
-    font-style: italic;
-    color: rgb(255,178,56);
-}
-
-/*Headers*/
-
-h2, h3, h4, h5 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.375em;
-    font-weight: 800;
-    letter-spacing: 0px;
-    line-height: 0.679em;
-    margin: 0px auto;
-}
-
-h2, h5 {
-    color: rgb(255,178,56);
-    font-size: 4.827em;
-}
-
-h3, h4 {
-    padding: 8px 100px;
-    color: rgb(242,100,61);  
-}
-
-h2 {
-    padding-top: 10px;
-}
-
-h5 {
-    padding: 10px 0px;
-}
-
 /*Body*/
-
 p { 
     color: rgb(10,3,16);
     font-family: 'Muli', sans-serif;
@@ -121,79 +60,22 @@ p {
     line-height: 1.3em;
 }
 
-span.hidden {
-    visibility: hidden;
-    line-height: 0.679em;
-}
-
-#language.container p {
-    padding: 0px 100px
-}
-
-#about {
-    text-align: right;
-    float: right;
-    background-color: white;
-    margin: 100px 200px;
-    height: 450px;
-    box-shadow: 0 20px 30px rgba(0,0,0,0.15), 0 6px 6px rgba(0,0,0,0.12);
-    padding: 0px 50px;
-    overflow: hidden;
-}
-
-#language {
-    background-color: rgb(231,237,234);
-    height: 630px;
-    text-align: left;
-    float: left;
-    overflow: hidden;
-}
-
-#motorcycles {
-    background-color: white;
-    text-align: left;
-    float: left;
-    padding: 70px 0px 0px 100px;
-}
-
 /*footer*/
-
 .myFooter {
     overflow: hidden;
     background-color: rgb(73,0,126) ;
     bottom: 0;
     padding: 5% 15%;
 }
-
 .myFooter p {
     color: rgb(255,178,56);
 }
-
 .myFooter a:link, a:visited {
     color: rgb(231,237,234);
     text-decoration: none;
 }
-
 .myFooter a:hover {
     color: rgb(255,0,91);
 }
 
 /*Images*/
-
-#about img {
-    float: left;
-    padding: 30px 10px 0px 0px;
-    max-width:290px;
-}
-
-#motorcycles img {
-    float: right;
-    max-width: 700px;
-}
-
-#language img {
-    float: right;
-    max-width: 600px;
-    padding-left: 100px
-}
-
