@@ -137,8 +137,8 @@ section {
 .container {
     align-content: flex-end;
     margin: 0 auto;
-    width: 43%;
-    height: 300px;
+    width: 50%;
+    height: 65%;
     padding: 2em 3em;
     background: white;
     border-radius: 25px;
