@@ -69,15 +69,8 @@ li {
     background:#ffffff;
     color: rgb(8,15,43);
     border-radius: 10px;
+    transition: .5s;
 }
-.btn:hover {
-	-webkit-transition-property: all;
-	-webkit-transition-duration: .5s;
-  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
-	-moz-transition-property: all;
-  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
-}
-
 /*Typewriter*/
 h1, h2 {
     font-family: Montserrat, sans-serif;
