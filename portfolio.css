@@ -7,21 +7,36 @@
     padding: 0;
     box-sizing: border-box;
   }
-body,html {
+body, html {
     width: 100vw;
 	height: 100vh;
 	align-items: center;
     justify-content: center;
     overflow: hidden;
 }
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+  }
 body {
     font-family: Montserrat, Muli, Arial, Helvetica, sans-serif;
-    background: var(--light-color);
     color: rgb(10,3,16);
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #666; 
 }
 :root {
     --primary-color: rgb(255,158,157);
-    --secondary-color: rgb(79,41,88);
+    --secondary-color: rgb(64, 8, 97);
     --complimentary-color: rgb(107, 197, 95);
     --contrast-color: rgb(167,2,103);
     --light-color: rgb(63,184,175);
@@ -102,6 +117,7 @@ h1, h2 {
 }
 h1 {
     font-size: 4.5em;
+    line-height: 0.5em;
 }
 #typewriter {
     font-family: Arial;
@@ -124,7 +140,7 @@ h1 {
 /* Header */
 header {
     height: 100vh;
-    margin: 10%;
+    margin: 15%;
     text-align: center;
     color: rgb(10,3,16);
     font-family: 'Muli', sans-serif;
@@ -139,15 +155,11 @@ header a {
 /*Body*/
 
 section {
-    position: absolute;
-    top: 0;
     height: 100vh;
-    width: 0;
-    opacity: 0;
+    width: 100vw;
     transition: all ease-in .5s;
     padding-top: 5vw;
     align-items: center;
-    overflow: hidden;
 }
 .container {
     align-content: flex;
@@ -159,32 +171,16 @@ section {
     border-radius: 25px;
     box-shadow: 5px 5px 15px rgba(var(--contrast-color), .5);
 }
-section h2 {
+.container img {
+    float: right;
+    max-width: 20%;
+    max-height: 20%;
+}
+h2 {
     font-size: 2.179rem;
-    opacity: 0;
     height: 1.5em;
     width: 100%;
     margin-bottom: 1em;
-}
-section:target {
-    opacity: 1;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-}
-section:target h2 {
-    opacity: 1;
-}
-#about{
-    background: var(--contrast-color);
-}
-#portfolio{
-  background:var(--secondary-color);
-}
-#contact{
-    background: var(--complimentary-color);
 }
 /* Body */
 p { 
@@ -205,46 +201,6 @@ p {
     color: rgb(8,15,43);
     transition-duration: 0.5s;
 }
-#contact-me.btn {
-    display: block;
-    text-align: center;
-    bottom: 0;
-    color: var(--contrast-color);
-    margin: 3em;
-    border: 2px solid var(--contrast-color);
-    border-radius: 20px;
-    padding: 0.5em 1em;
-}
-#contact-me.btn:hover {
-    background:var(--contrast-color);
-    color: white;
-    transition-duration: 0.5s;
-}
-/* Contact */
-input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
-    font-size: 0.75em;
-    top: -5px;
-    -webkit-transition: all 0.225s ease;
-    transition: all 0.225s ease;
-}
-/*
-#contact textarea {
-    width: 100%;
-    height: 50%;
-}
-#contact input.btn {
-    text-align: center;
-    background: white;
-    font-weight: bold;
-    border-radius: 10px;
-    border: 2px solid var(--complimentary-color);
-    color: var(--complimentary-color);
-}
-#contact input.btn:hover {
-    color: white;
-    border-radius: 20px;
-    background-color: var(--complimentary-color);
-} */
 
 /* Portfolio */
 .wrapper {
