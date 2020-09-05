@@ -12,6 +12,7 @@ body, html {
 	height: 100vh;
 	align-items: center;
     justify-content: center;
+    overflow-x: hidden
 }
 @viewport {
     width: device-width ;
@@ -152,18 +153,19 @@ header p {
     padding: 1.5em;
 }
 header a.btn {
-    font-size: 0.8em;
+    font: 'Muli' 500 0.8em;
     box-shadow: 0 0 2em -1em black;
     color: var(--light-color);
-    background: linear-gradient( rgb(256,256,256, 0.7), rgb(256,256,256,0.5));
+    background: linear-gradient(rgb(256,256,256, 0.8), rgb(256,256,256,0.5));
     text-align: center;
     border-radius: 25px;
     padding: 1em 2em;
+    transition: background-color ease 1s;
 }
 header a.btn:hover {
-    background: rgb(256, 256, 256, 1);
-    transition-duration: 2s;
+    background-color: white;
 }
+
 /*Body*/
 
 section {
@@ -302,3 +304,147 @@ p {
     background: white;
     color: black;
 }
+/* Contact */
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #aca49c;
+    font-size: 0.875em;
+  }
+  
+  input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+    color: #bbb5af;
+  }
+  
+  input::-moz-placeholder, textarea::-moz-placeholder {
+    color: #aca49c;
+    font-size: 0.875em;
+  }
+  
+  input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+    color: #bbb5af;
+  }
+  
+  input::placeholder, textarea::placeholder {
+    color: #aca49c;
+    font-size: 0.875em;
+  }
+  
+  input:focus::placeholder, textarea::focus:placeholder {
+    color: #bbb5af;
+  }
+  
+  input::-ms-placeholder, textarea::-ms-placeholder {
+    color: #aca49c;
+    font-size: 0.875em;
+  }
+  
+  input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
+    color: #bbb5af;
+  }
+  
+  /* on hover placeholder */
+  
+  input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
+    color: #e2dedb;
+    font-size: 0.875em;
+  }
+  
+  input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
+    color: #cbc6c1;
+  }
+  
+  input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
+    color: #e2dedb;
+    font-size: 0.875em;
+  }
+  
+  input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
+    color: #cbc6c1;
+  }
+  
+  input:hover::placeholder, textarea:hover::placeholder {
+    color: #e2dedb;
+    font-size: 0.875em;
+  }
+  
+  input:hover:focus::placeholder, textarea:hover:focus::placeholder {
+    color: #cbc6c1;
+  }
+  
+  input:hover::placeholder, textarea:hover::placeholder {
+    color: #e2dedb;
+    font-size: 0.875em;
+  }
+  
+  input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
+    color: #cbc6c1;
+  }
+  #form {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  input {
+    font-family: 'Muli', sans-serif;
+    font-size: 1em;
+    letter-spacing: 1px;
+    width: 45%;
+    height: 50px;
+    padding: 0px 15px 0px 15px;
+    margin: 0.5em;
+    
+    background: transparent;
+    outline: none;
+    
+    border: solid 1px;
+    
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+  }
+  
+  input:hover {
+    background: var(--complimentary-color);
+    color: white;
+  }
+  
+  textarea {
+    width: 100%;
+    max-width: 470px;
+    padding: 15px;
+    margin: 0 0.5em;
+    
+    background: transparent;
+    outline: none;
+    
+    font-family: 'Muli', sans-serif;
+    font-size: 0.875em;
+    
+    border: solid 1px #aca49c;
+    
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+  }
+  
+  #submit {
+    margin: 0.5em;
+    padding: 0;
+    
+    font-family: 'Muli', sans-serif;
+    font-size: 0.875em;
+    color: var(--complimentary-color);
+    
+    outline:none;
+    cursor: pointer;
+    
+    border: solid 2px var(--complimentary-color);
+    border-radius: 25px;
+  }
+  
+  #submit:hover {
+    background: var(--complimentary-color);
+    color: white;
+  }  

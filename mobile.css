@@ -1,4 +1,4 @@
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 360px) and (max-width: 600px) {
 nav {
     position: fixed;
     z-index: 50;
@@ -21,10 +21,13 @@ li {
 }
 ul #left {
     display: inline-flex;
-    flex: 0 1 auto;
+    flex: 1 1 auto;
     justify-content: center;
 }
 ul #right {
+    visibility: hidden;
+}
+svg {
     visibility: hidden;
 }
 .btn{
@@ -104,8 +107,8 @@ section {
 .container {
     align-content: flex;
     margin: 0 auto;
-    width: 90%;
-    height: 65%;
+    width: 90vw;
+    height: 60vh;
     padding: 2em 3em;
     background: white;
     border-radius: 25px;
