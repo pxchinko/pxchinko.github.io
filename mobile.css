@@ -169,7 +169,7 @@ p {
 }
 .card {
     width: 80vw;
-	height: 90vh;
+	height: 100vh;
 	border-radius: 25px;
     background: white;
     position: relative;
