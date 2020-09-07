@@ -94,7 +94,7 @@ header {
     height: 100vh;
     width: 100vw;
     font-family: 'Muli';
-    padding-top: 20vw;
+    padding-top: 30vw;
     text-align: center;
 }
 header p {
@@ -122,7 +122,7 @@ section {
     width: 100vw;
     align-items: center;
     animation: fadeUp 1s;
-    padding: 7vw 0vw
+    padding: 10vw 0vw
 }
 @keyframes fadeUp {
     0% {
