@@ -49,44 +49,32 @@ nav {
     position: fixed;
     z-index: 50;
     top: 0;
+    width: 100vw;
+
     font-family: 'Muni', sans-serif;
     padding: 1em 2em;
-    width: 100vw;
-}
-ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    justify-content: center;
+    
     align-items: center;
 }
-li {
-    border-radius: 5px;
-    padding: 0.5em;
-    margin: 0;
+.topnav a {
+    float: left;
 }
-ul #left {
-    display: inline-flex;
-    flex: 0 1 auto;
-    justify-content: flex-start;
+#mobile-menu {
+    display: none;
+    visibility: hidden;
 }
-ul #right {
-    display: inline-flex;
-    flex: 01 auto;
-    justify-content: flex-end;
+#right {
+    float: right;
 }
-#right li {
-    padding: 0 2em;
+#right a {
+    padding: 0em 1em;
 }
-svg {
-    max-width: 30px;
-    max-height: 30px;
+#right svg {
+    max-width: 25px;
+    max-height: 25px;
     fill: white;
 }
-#left li a:hover {
-    border-bottom: orange solid 2px;
-}
-li:hover {
+.topnav a:hover {
     transform: translateY(8px);
     transition: 0.5s;
 }
@@ -153,27 +141,29 @@ header p {
     padding: 1.5em;
 }
 header a.btn {
-    font: 'Muli' 500 0.8em;
-    box-shadow: 0 0 2em -1em black;
-    color: var(--light-color);
-    background: linear-gradient(rgb(256,256,256, 0.8), rgb(256,256,256,0.5));
+    font: 'Muli' 0.9em;
+    color: white;
     text-align: center;
+
     border-radius: 25px;
+    border: 2px solid white;
     padding: 1em 2em;
-    transition: background-color ease 1s;
+    background: none;
+
+    transition: ease 1s;
 }
 header a.btn:hover {
     background-color: white;
+    color: var(--light-color);
 }
 
 /*Body*/
 
 section {
-    height: 100vh;
     width: 100vw;
+    padding: 7vh 0;
+
     transition: all ease-in .5s;
-    padding-top: 5vw;
-    align-items: center;
     animation: fadeInRight 0.5s;
 }
 @keyframes fadeInRight {
@@ -192,17 +182,18 @@ section {
     align-content: flex;
     margin: 0 auto;
     width: 60%;
-    height: 68%;
-    padding: 2em 3em;
+    padding: 3em 3em;
     background: white;
     border-radius: 25px;
     box-shadow: 0 0 2em -1em black;
 }
 .container img {
     float: right;
-    max-width: 60%;
-    max-height: 60%;
-    padding-left: 1em;
+    width: 35%;
+    height: 35%;
+    max-width: 500px;
+    max-height: 500px;
+    padding: 0em 0em 1em 1em;
 }
 h2 {
     font-size: 2.179rem;
@@ -223,12 +214,11 @@ p {
     display: flex;
     flex-wrap: wrap;
     width: 100vw;
-    padding: 0 5vw 5vw;
-    margin: 0 auto
+    margin: 0 auto;
 }
 .card {
-    width: 400px;
-	height: 270px;
+    width: 35vw;
+	height: 50vh;
 	border-radius: 20px;
 	background: white;
 	position: relative;
@@ -306,95 +296,64 @@ p {
 }
 /* Contact */
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-    color: #aca49c;
     font-size: 0.875em;
-  }
-  
-  input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
-    color: #bbb5af;
-  }
-  
-  input::-moz-placeholder, textarea::-moz-placeholder {
-    color: #aca49c;
+}
+input::placeholder, textarea::placeholder {
     font-size: 0.875em;
-  }
-  
-  input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
-    color: #bbb5af;
-  }
-  
-  input::placeholder, textarea::placeholder {
-    color: #aca49c;
-    font-size: 0.875em;
-  }
-  
-  input:focus::placeholder, textarea::focus:placeholder {
-    color: #bbb5af;
-  }
-  
-  input::-ms-placeholder, textarea::-ms-placeholder {
-    color: #aca49c;
-    font-size: 0.875em;
-  }
-  
-  input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
-    color: #bbb5af;
-  }
-  
-  /* on hover placeholder */
-  
-  input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
-    color: #e2dedb;
-    font-size: 0.875em;
-  }
-  
-  input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
-    color: #cbc6c1;
-  }
-  
-  input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
-    color: #e2dedb;
-    font-size: 0.875em;
-  }
-  
-  input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
-    color: #cbc6c1;
-  }
-  
-  input:hover::placeholder, textarea:hover::placeholder {
-    color: #e2dedb;
-    font-size: 0.875em;
-  }
-  
-  input:hover:focus::placeholder, textarea:hover:focus::placeholder {
-    color: #cbc6c1;
-  }
-  
-  input:hover::placeholder, textarea:hover::placeholder {
-    color: #e2dedb;
-    font-size: 0.875em;
-  }
-  
-  input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
-    color: #cbc6c1;
-  }
-  #form {
+}
+#form {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-  }
-  
-  input {
+    justify-content: space-between;
+    text-align: center;
+}
+input:focus,
+textarea:focus { outline: 0; }
+
+input:focus ~ span,
+textarea:focus ~ span {
+    width: 100%;
+    -webkit-transition: all 0.075s ease;
+    transition: all 0.075s ease;
+}
+.inputBox {
+    display: inline-flex;
     font-family: 'Muli', sans-serif;
     font-size: 1em;
     letter-spacing: 1px;
-    width: 45%;
+    width: 49%;
     height: 50px;
     padding: 0px 15px 0px 15px;
-    margin: 0.5em;
+    margin-bottom: 1em;
     
     background: transparent;
     outline: none;
+    
+    border: solid 1px;
+}
+input {      
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}  
+input:hover {
+    background: var(--complimentary-color);
+    color: white;
+}  
+textarea {
+    width: 100%;
+    height: 30vh;
+    padding: 15px;
+    margin-bottom: 2em;
+    
+    background: transparent;
+    outline: none;
+    
+    font-family: 'Muli', sans-serif;
+    font-size: 0.875em;
+    letter-spacing: 1px;
     
     border: solid 1px;
     
@@ -402,49 +361,20 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
-  }
+}
   
-  input:hover {
+#submit {
+    padding: 1em 2em;
+    display: inline-block;
+    
+    font-family: 'Muli', sans-serif;
+    font-size: 0.875em;
     background: var(--complimentary-color);
     color: white;
-  }
-  
-  textarea {
-    width: 100%;
-    max-width: 470px;
-    padding: 15px;
-    margin: 0 0.5em;
-    
-    background: transparent;
-    outline: none;
-    
-    font-family: 'Muli', sans-serif;
-    font-size: 0.875em;
-    
-    border: solid 1px #aca49c;
-    
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-  }
-  
-  #submit {
-    margin: 0.5em;
-    padding: 0;
-    
-    font-family: 'Muli', sans-serif;
-    font-size: 0.875em;
-    color: var(--complimentary-color);
     
     outline:none;
     cursor: pointer;
     
-    border: solid 2px var(--complimentary-color);
+    border: none;
     border-radius: 25px;
-  }
-  
-  #submit:hover {
-    background: var(--complimentary-color);
-    color: white;
-  }  
+}  
