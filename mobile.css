@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 body, html {
     width: 100vw;
@@ -18,7 +20,7 @@ body, html {
 }
 /* Navigation */
 nav {
-    position: absolute;
+    position: fixed;
     top:0;
     z-index: 100;
     overflow: hidden;
