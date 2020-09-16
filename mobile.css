@@ -50,7 +50,7 @@ nav {
     padding: 1em 2em 0em 2em
 }
 #mobile-menu {
-    justify-content: space-evenly;
+    justify-content: space-around;
     display: flex;
 }
 #mobile-menu svg {
