@@ -50,6 +50,7 @@ nav {
     z-index: 50;
     top: 0;
     width: 100vw;
+    overflow: hidden;
 
     font-family: 'Muni', sans-serif;
     padding: 1em 2em;
@@ -86,6 +87,7 @@ nav {
     letter-spacing: 2px;
     text-transform: uppercase;
 }
+
 /*Typewriter*/
 h1, h2 {
     font-family: Montserrat, sans-serif;
@@ -365,7 +367,7 @@ textarea {
   
 #submit {
     padding: 1em 2em;
-    display: inline-block;
+    display: block;
     
     font-family: 'Muli', sans-serif;
     font-size: 0.875em;
