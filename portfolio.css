@@ -51,7 +51,6 @@ nav {
     top: 0;
     width: 100vw;
     padding: 1em;
-    overflow: hidden;
 
     font-family: 'Muni', sans-serif;
 }
@@ -340,7 +339,6 @@ p {
 }
 .video-card {
     background: white;
-    display: grid;
     box-shadow: 0 0 3em -1em black;
 }
 .video-card video {
