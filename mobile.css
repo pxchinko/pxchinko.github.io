@@ -234,6 +234,37 @@ p {
     color: var(--secondary-color);
     cursor: pointer;
 }
+/* Presentations */
+.wrapper {
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    margin: 0 auto;
+}
+.video-card {
+    background: white;
+    display: grid;
+    box-shadow: 0 0 3em -1em black;
+}
+.video-card video {
+    padding: 1em;
+}
+.video-card #info {
+    font-family: 'Muli', sans-serif;
+    border-radius: inherit;
+    color: black;
+    transition: 0.5s;
+    padding: 1.5rem;
+}
+.video-card #info h3 {
+    margin: 0px;
+}
+.video-card #info p {
+    color: black;
+    letter-spacing: 1px;
+    font-size: 0.79em;
+}
 /* Contact */
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     font-size: 0.875em;

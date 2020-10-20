@@ -9,6 +9,8 @@
     <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Varela+Round&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,500;1,300&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- CSS Stylesheet -->
   <link rel="stylesheet" type="text/css" media="screen and (min-width: 361px) and (max-width: 700px)" href="../mobile.css" />
   <link rel="stylesheet" type="text/css" media="screen and (min-width: 700px)" href="../portfolio.css" />
@@ -32,7 +34,16 @@
   <div id="left">
     <a class="btn" href="../index.html">home</a>
     <a class="btn" href="about.html">about</a>
-    <a class="btn" href="portfolio.html">portfolio</a>
+    <div class="dropdown">
+      <button class="dropbtn"><span class="btn">portfolio</span> 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a class="btn" href="portfolio.html">Projects</a>
+        <a class="btn" href="portfolio/massie-rest.html">Presentations</a>
+        <a class="btn" href="portfolio/massie-diagrams.html">Diagrams</a>
+      </div>
+    </div> 
     <a class="btn" href="contact.html">contact</a>
     </div>
     <div id="mobile-menu">
