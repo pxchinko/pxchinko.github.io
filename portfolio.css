@@ -198,7 +198,7 @@ header a.btn:hover {
 
 section {
     width: 100vw;
-    padding: 7vh 0;
+    padding: 10vh 0;
 
     transition: all ease-in .5s;
     animation: fadeInRight 0.5s;
@@ -254,8 +254,8 @@ p {
     margin: 0 auto;
 }
 .card {
-    width: 400px;
-	height: 300px;
+    width: 500px;
+	height: 400px;
 	background: white;
 	position: relative;
     display: flex;
@@ -358,6 +358,49 @@ p {
     color: black;
     letter-spacing: 1px;
     font-size: 0.79em;
+}
+/* Diagrams */
+.wrapper {
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    margin: 0 auto;
+}
+.diagram-card {
+    width: 350px;
+	background: white;
+    position: relative;
+    padding: 16px;
+    margin: 20px;
+    display: block;
+    align-items: center;
+    box-shadow: 0 0 3em -1em black;
+    transition: 0.4s ease-out;
+}
+.diagram-card:hover {
+    transform: translateY(-10px);
+}
+.diagram-card img {
+    max-width: 320px;
+}
+.diagram-card #info {
+    font-family: 'Muli', sans-serif;
+    position: relative;
+    border-radius: inherit;
+    z-index: 3;
+    color: black;
+    padding: 1.5em;
+    float: left;
+}
+.diagram-card #info h3 {
+    margin: 0px;
+}
+.diagram-card #info p {
+    color: black;
+    letter-spacing: 1px;
+    font-size: 0.79em;
+    margin-top: 1em ;
 }
 /* Contact */
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
