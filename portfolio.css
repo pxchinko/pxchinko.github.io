@@ -9,10 +9,13 @@
   }
 body, html {
     width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
 	align-items: center;
     justify-content: center;
-    overflow-x: hidden
+    overflow-x: hidden;
+    background: #eaafc8;
+    background: -webkit-linear-gradient(to right, #eaafc8, rgb(101, 78, 163));
+    background: linear-gradient(to right, #eaafc8, #654ea3);
 }
 @viewport {
     width: device-width ;
@@ -40,38 +43,23 @@ body {
     --secondary-color: rgb(64, 8, 97);
     --complimentary-color: rgb(107, 197, 95);
     --contrast-color: rgb(167,2,103);
-    --light-color: rgb(63,184,175);
+    --light-color:  rgb(101, 78, 163);
     --transition-time: 0.5s;
     font-size: 1em;
     }
 
 /*Navigation*/
-nav {
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    padding: 1em;
 
-    font-family: 'Muni', sans-serif;
+.megamenu {
+    position: static
 }
-.topnav a {
-    float: left;
+
+.megamenu .dropdown-menu {
+    background: none;
+    border: none;
+    width: 100%
 }
-#mobile-menu {
-    display: none;
-    visibility: hidden;
-}
-#right {
-    float: right;
-}
-#right a {
-    padding: 1em;
-}
-#right svg {
-    max-width: 25px;
-    max-height: 25px;
-    fill: white;
-}
+
 .btn{
     color: white;
     padding: 20px 30px;
@@ -79,48 +67,6 @@ nav {
     text-decoration: none;
     letter-spacing: 2px;
     text-transform: uppercase;
-}
-.dropdown {
-    float: left;
-}
-
-.dropdown .dropbtn {
-    width: 180px;
-    padding-top: 16px;
-    font-size: inherit;  
-    border: none;
-    outline: none;
-    color: white;
-    background-color: inherit;
-    font-family: inherit;
-}
-
-.dropdown:hover .dropbtn {
-    transition: 0.5s;
-}
-
-.dropdown-content {
-    padding-top: 16px;
-    display: none;
-    position: absolute;
-    z-index: 1;
-}
-
-.dropdown-content a {
-    float: none;
-    color: white;
-    padding: 16px;
-    text-decoration: none;
-    display: block;
-    text-align: right;
-}
-
-.dropdown-content a:hover {
-transition: 0.5s;
-}
-
-.dropdown:hover .dropdown-content {
-display: block;
 }
 
 /*Typewriter*/
@@ -155,7 +101,7 @@ h1 {
   }
 /* Header */
 header {
-    height: 100vh;
+    height: 90vh;
     padding: 15%;
     text-align: center;
     color: rgb(10,3,16);
@@ -197,8 +143,7 @@ header a.btn:hover {
 /*Body*/
 
 section {
-    width: 100vw;
-    padding: 10vh 0;
+    padding: 5vh 0;
 
     transition: all ease-in .5s;
     animation: fadeInRight 0.5s;
@@ -215,25 +160,14 @@ section {
     }
 }
   
-.container {
-    align-content: flex;
-    margin: 0 auto;
-    width: 60%;
-    padding: 3em 3em;
-    background: white;
-    border-radius: 25px;
-    box-shadow: 0 0 2em -1em black;
-}
 .container img {
     float: right;
-    width: 35%;
-    height: 35%;
-    max-width: 500px;
-    max-height: 500px;
+    max-width: 250px;
+    max-height: 250px;
     padding: 0em 0em 1em 1em;
 }
 h2 {
-    font-size: 2.179rem;
+    font-size: 3em;
     height: 1.5em;
     width: 100%;
     margin-bottom: 1em;
@@ -254,8 +188,18 @@ p {
     margin: 0 auto;
 }
 .card {
-    width: 500px;
-	height: 400px;
+    width: 550px;
+	height: 500px;
+	background: white;
+	position: relative;
+    display: flex;
+    margin: 20px;
+    box-shadow: 0 0 3em -1em black;
+    transition: 0.4s ease-out;
+}
+.art-card {
+    width: 600px;
+	height: 600px;
 	background: white;
 	position: relative;
     display: flex;
@@ -293,7 +237,15 @@ p {
     position: absolute;
     top: 0;
     left: 0;
-}
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(90%); /* Chrome 19+ & Safari 6+ */
+  }
+  
+.card img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+  }
+
 .info {
     font-family: 'Muli', sans-serif;
     position: relative;
@@ -328,6 +280,52 @@ p {
 .info > a.btn:hover {
     background: white;
     color: black;
+}
+
+/* Skills Bar */
+.progress-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 20px
+}
+
+.progress {
+    height: 20px;
+    background: #f1f1f1;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 30px;
+    overflow: visible
+}
+
+.progress .progress-bar {
+    position: relative;
+    -webkit-animation: animate-positive 2s;
+    animation: animate-positive 2s
+}
+
+.progress .progress-value {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    position: absolute;
+    top: -30px;
+    right: -25px
+}
+
+.progress .progress-bar:after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    background: #fff;
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    right: -5px;
+    z-index: 1;
+    transform: rotate(35deg)
 }
 /* Presentations */
 .wrapper {
@@ -439,8 +437,8 @@ input {
 }  
 input:focus, #submit:hover, textarea:focus {
     background: white;
-    border: 1px solid var(--complimentary-color);
-    color: var(--complimentary-color);
+    border: 1px solid var(--light-color);
+    color: var(--light-color);
 }  
 textarea {
     width: 100%;
@@ -466,11 +464,10 @@ textarea {
 input#submit {
     height: 50px;
     width: 150px;
-    float: inline-end;
     
     font-family: 'Muli', sans-serif;
     font-size: 0.875em;
-    background: var(--complimentary-color);
+    background: var(--light-color);
     color: white;
     
     outline:none;
