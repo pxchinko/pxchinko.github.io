@@ -238,7 +238,7 @@ p {
     top: 0;
     left: 0;
     filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(90%); /* Chrome 19+ & Safari 6+ */
+    -webkit-filter: grayscale(70%); /* Chrome 19+ & Safari 6+ */
   }
   
 .card img:hover {
