@@ -188,8 +188,6 @@ p {
     margin: 0 auto;
 }
 .card {
-    width: 450px;
-	height: 600px;
 	background: white;
 	position: relative;
     display: flex;
@@ -336,11 +334,13 @@ p {
     margin: 0 auto;
 }
 .video-card {
+    height: 480px;
+	width: 600px;
     background: white;
     box-shadow: 0 0 3em -1em black;
 }
 .video-card video {
-    padding: 1em;
+    padding: 10px;
 }
 .video-card #info {
     font-family: 'Muli', sans-serif;
