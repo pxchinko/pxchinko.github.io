@@ -13,9 +13,7 @@ body, html {
 	align-items: center;
     justify-content: center;
     overflow-x: hidden;
-    background: #eaafc8;
-    background: -webkit-linear-gradient(to right, #eaafc8, rgb(101, 78, 163));
-    background: linear-gradient(to right, #eaafc8, #654ea3);
+    background: white;
 }
 @viewport {
     width: device-width ;
